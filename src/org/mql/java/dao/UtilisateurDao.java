@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import org.mql.java.models.Artisant;
 import org.mql.java.models.Utilisateur;
 
-public class UtilisateurDao {
+public class UtilisateurDao implements DaoInterface{
 	private DataSource dataSource;
 
 	public UtilisateurDao(DataSource dataSource) {
@@ -69,8 +69,9 @@ public class UtilisateurDao {
 	}
 	public List getArtisants() throws SQLException{
 		ArrayList<Artisant> list = new ArrayList<Artisant>();
-		String query = "Select Utilisateur.Id,nom,prenom,ville,tele,confirmer,referent from utilisateur,artisant where type_utilisateur=1 and Utilisateur.Id = Artisant.id";
+		String query = "Select Utilisateur.Id,nom,prenom,ville,tele,confirmer,referent from utilisateur,artisant where type_utilisateur=? and Utilisateur.Id = Artisant.id";
 		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+		pstmt.setInt(1, 1);
 		ResultSet resultSet = pstmt.executeQuery();
 		while(resultSet.next()) {
 			Artisant b = new Artisant();
@@ -98,6 +99,37 @@ public class UtilisateurDao {
 		}else {
 			return false;
 		}
+	}
+	public boolean update_unconfirmer(Artisant art) throws SQLException {
+		String query = "UPDATE artisant set confirmer = ? WHERE id = ?";
+		PreparedStatement ps = dataSource.getConnection().prepareStatement(query);
+		ps.setInt(1, 0);
+		ps.setInt(2, art.getId());
+		if(ps.executeUpdate() == 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public List getClients() throws SQLException{
+		ArrayList<Utilisateur> list = new ArrayList<Utilisateur>();
+		String query = "Select Utilisateur.Id,nom,prenom,ville,tele from utilisateur where type_utilisateur=?";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+		pstmt.setInt(1, 2);
+		ResultSet resultSet = pstmt.executeQuery();
+		while(resultSet.next()) {
+			Utilisateur b = new Utilisateur();
+			b.setId(resultSet.getInt("Id"));
+			b.setUsername("");
+			b.setPassword("");
+			b.setNom(resultSet.getString("nom"));
+			b.setPrenom(resultSet.getString("prenom"));
+			b.setEmail("");
+			b.setVille(resultSet.getString("ville"));
+			b.setTele(resultSet.getString("tele"));
+			list.add(b);
+		}
+		return list;
 	}
 
 }

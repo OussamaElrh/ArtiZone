@@ -17,7 +17,8 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
-								<td ng-click="sort('id')" align="center" ><strong>Id Artisant </strong> 
+								<td ng-click="sort('id')" align="center" >
+									<strong>Id Artisant </strong> 
 									<i class="fa fa-sort" ng-show="sortKey=='artisants.id'" ng-class="{'fa fa-sort-desc':reverse,'fa fa-sort-asc':!reverse}"></i>
 								</td>
 								<td ng-click="sort('nom')" align="center"><strong>Nom</strong>
@@ -53,7 +54,7 @@
                                       <i class="fa fa-remove" ng-click="modify_conf(artisant)"></i>
                                        </div>                                       
                                        <div ng-switch-when="1">
-                                           <i class="fa fa-check" ng-click="modify_conf(artisant)"></i>
+                                           <i class="fa fa-check" ng-click="modify_unconf(artisant)"></i>
                                        </div>
                                     </div>
 								</td>
@@ -69,13 +70,11 @@
                                   </td>
 							</tr>
 						</tbody>
-					</table> 
-					<dir-pagination-controls
-						max-size="5"
-						direction-links="true"
-						boundary-links="true" >
-					</dir-pagination-controls>
-				</div>
+					</table>
+   					<dir-pagination-controls 
+								max-size="10" direction-links="true"
+					 			boundary-links="true" > 
+					 </dir-pagination-controls>
 			</div>
 	</div>
 </div>
@@ -115,11 +114,29 @@
     				}
     			}).success(function(data){
     				if(data==1){
-    					$.toaster({ priority : 'success', message : 'Artisant confirmer !', timeout : '1000'});
+    					$.toaster({ priority : 'success', message : 'Artisant confirmé avec succès !', timeout : '1000'});
     					$scope.get_artisant();
     				}
     				else
-    					$.toaster({ priority : 'danger', message : 'Artisant non confirmer !', timeout : '1000'});
+    					$.toaster({ priority : 'danger', message : 'Erreur lors de la confirmation  !', timeout : '1000'});
+    			})
+			}
+	$scope.modify_unconf = function(obj){
+				
+				$http({
+    				method : 'POST',
+    				url : 'modify_unconf',
+    				data : obj,
+    				headers : {
+    					'Content-Type' : 'application/json'
+    				}
+    			}).success(function(data){
+    				if(data==1){
+    					$.toaster({ priority : 'success', message : 'Artisant déconfirmé avec succès !', timeout : '1000'});
+    					$scope.get_artisant();
+    				}
+    				else
+    					$.toaster({ priority : 'danger', message : 'Erreur lors déconfirmation  !', timeout : '1000'});
     			})
 			}
 			$scope.sort = function(keyname){

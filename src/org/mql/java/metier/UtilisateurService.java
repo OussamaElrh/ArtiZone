@@ -7,7 +7,7 @@ import org.mql.java.dao.UtilisateurDao;
 import org.mql.java.models.Artisant;
 import org.mql.java.models.Utilisateur;
 
-public class UtilisateurService{
+public class UtilisateurService implements ServiceInterface{
 	private UtilisateurDao UtilisateurDao;
 	
 	public UtilisateurService(UtilisateurDao serviceDao) {
@@ -29,6 +29,12 @@ public class UtilisateurService{
 	}
 	public boolean update_confirmer(Artisant art) throws SQLException {
 		return UtilisateurDao.update_confirmer(art);
+	}
+	public boolean update_unconfirmer(Artisant art) throws SQLException {
+		return UtilisateurDao.update_unconfirmer(art);
+	}
+	public List getClient_List() throws SQLException{
+		return UtilisateurDao.getClients();
 	}
 	
 }

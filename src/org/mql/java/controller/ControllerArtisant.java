@@ -38,9 +38,18 @@ public class ControllerArtisant {
 			}	
 	}
 	@RequestMapping(value = "/list_ar", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public void yu(HttpServletRequest request, HttpServletResponse response) {
+	public void Art_list(HttpServletRequest request, HttpServletResponse response) {
 			try {
 				response.getWriter().println(new Gson().toJson(UtilisateurService.getArtList()));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+	}
+	@RequestMapping(value = "/list_client", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public void Client_List(HttpServletRequest request, HttpServletResponse response) {
+			try {
+				response.getWriter().println(new Gson().toJson(UtilisateurService.getClient_List()));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -64,9 +73,14 @@ public class ControllerArtisant {
 		ModelAndView model = new ModelAndView("profil");
 		return model;
 	}
-	@RequestMapping("index")
-	public ModelAndView getinr() {
-		ModelAndView model = new ModelAndView("index");
+	@RequestMapping("Arts")
+	public ModelAndView getarts() {
+		ModelAndView model = new ModelAndView("artisants");
+		return model;
+	}
+	@RequestMapping("cls")
+	public ModelAndView getcls() {
+		ModelAndView model = new ModelAndView("clients");
 		return model;
 	}
 	@RequestMapping("loginOne")
@@ -88,7 +102,7 @@ public class ControllerArtisant {
 							HttpSession session = request.getSession();
 							session.setAttribute("login", username);
 							request.setAttribute("loggedInUser", username);
-							response.sendRedirect("accueil");
+							response.sendRedirect("profil");
 					}
 					else
 					{
@@ -133,7 +147,7 @@ public class ControllerArtisant {
 			}
 	}
 	@RequestMapping(value = "modify_conf", method = RequestMethod.POST)
-	public @ResponseBody void update_hfd( @RequestBody Artisant bean,HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException  {
+	public @ResponseBody void update_art_con( @RequestBody Artisant bean,HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException  {
 		boolean upd = UtilisateurService.update_confirmer(bean);
 			if(upd) {
 				response.getWriter().println(1);
@@ -141,5 +155,15 @@ public class ControllerArtisant {
 				response.getWriter().println(0);
 			}
 	}	
+	@RequestMapping(value = "modify_unconf", method = RequestMethod.POST)
+	public @ResponseBody void update_art_uncon( @RequestBody Artisant bean,HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException  {
+		boolean upd = UtilisateurService.update_unconfirmer(bean);
+			if(upd) {
+				response.getWriter().println(1);
+			}else {
+				response.getWriter().println(0);
+			}
+	}	
+
 
 }
