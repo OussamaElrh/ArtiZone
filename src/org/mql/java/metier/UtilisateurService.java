@@ -36,5 +36,11 @@ public class UtilisateurService implements ServiceInterface{
 	public List getClient_List() throws SQLException{
 		return UtilisateurDao.getClients();
 	}
+	public boolean supprimer_artisant(Artisant art) throws SQLException{
+		return UtilisateurDao.sup_artisant(art);
+	}
+	public boolean supprimer_client(Utilisateur ut) throws SQLException{
+		return UtilisateurDao.sup_client(ut);
+	}
 	
 }

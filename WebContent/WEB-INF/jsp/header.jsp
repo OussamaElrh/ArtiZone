@@ -8,7 +8,6 @@ if(sessio.getAttribute("login")==null)
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -20,13 +19,19 @@ if(sessio.getAttribute("login")==null)
   <!-- Custom styles for this template-->7
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap-theme.min.css">
   <link href="${pageContext.request.contextPath}/resources/css/sb-admin.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/resources/css/loading-bar.css" rel="stylesheet">
   <link href="${pageContext.request.contextPath}/resources/js/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/resources/css/bootstrap-min.css" rel="stylesheet">
    <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
   <link href="${pageContext.request.contextPath}/resources/css/sb-admin.css" rel="stylesheet">
   <script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/dirPagination.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/jquery.toaster.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/angular-mocks.js"></script>
+  <script src="${pageContext.request.contextPath}/resources/js/angular-touch.js"></script>
+  <script src="${pageContext.request.contextPath}/resources/js/angular-scenario.js"></script>
+  <script src="${pageContext.request.contextPath}/resources/js/sweetalert2.all.js"></script>
    <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/logo/favicon.ico" width="100px" height="50px" >
   <link href="${pageContext.request.contextPath}/resources/css/fontawesome.css" rel="stylesheet">
@@ -174,4 +179,4 @@ if(sessio.getAttribute("login")==null)
           <a href="index">Acceuil</a>
         </li>
         <li class="breadcrumb-item active">Profil</li>
-      </ol>
+</ol>

@@ -1,5 +1,6 @@
 <%@include file="header.jsp" %>
       <!-- Icon Cards-->
+      
       <div class="row" ng-app="angularTable" ng-controller="listdata" ng-init="get_artisant()">
 		<div class="col">
 			<div class="col-lg-auto">
@@ -17,6 +18,7 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+							<td></td>
 								<td ng-click="sort('id')" align="center" >
 									<strong>Id Artisant </strong> 
 									<i class="fa fa-sort" ng-show="sortKey=='artisants.id'" ng-class="{'fa fa-sort-desc':reverse,'fa fa-sort-asc':!reverse}"></i>
@@ -43,6 +45,7 @@
 						</thead>
 						<tbody>
 							<tr dir-paginate="artisant in artisants|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+							<td><i class="fa fa-trash-o" ng-click="sup_art(artisant)"></i> </td>
 								<td align="center">{{artisant.id}}</td>
 								<td align="center">{{artisant.nom}}</td>
 								<td align="center">{{artisant.prenom}}</td>
@@ -71,10 +74,12 @@
 							</tr>
 						</tbody>
 					</table>
-   					<dir-pagination-controls 
-								max-size="10" direction-links="true"
-					 			boundary-links="true" > 
+					<div > 
+   					<dir-pagination-controls class="ng-isolate-scope"
+								max-size="4" direction-links="true"
+					 			boundary-links="true"> 
 					 </dir-pagination-controls>
+					 </div>
 			</div>
 	</div>
 </div>
@@ -139,11 +144,45 @@
     					$.toaster({ priority : 'danger', message : 'Erreur lors déconfirmation  !', timeout : '1000'});
     			})
 			}
+			
+		$scope.sup_art = function(obj){	
+			swal({
+				  title: 'Etes-vous sure?',
+				  text: "Cet artisant sera supprimer!",
+				  type: 'warning',
+				  showCancelButton: true,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: 'oui'
+				},
+				function(inputValue){
+					  if (inputValue===false) {
+					  } else {
+						  $http({
+								method : 'POST',
+								url : 'sup_art',
+								data : obj,
+								headers : {
+									'Content-Type' : 'application/json'
+								}
+							}).success(function(data){
+								if(data==1){
+									$.toaster({ priority : 'success', message : 'Artisant supprimé avec succès !', timeout : '1000'});
+									$scope.get_artisant();
+								}
+								else
+									$.toaster({ priority : 'danger', message : 'Erreur lors de la suppression  !', timeout : '1000'});
+							})
+					  }
+					})
+			
+			}
 			$scope.sort = function(keyname){
 				$scope.sortKey = keyname;   //set the sortKey to the param passed
 				$scope.reverse = !$scope.reverse; //if true make it false and vice versa
 			}
 			})
+			
 	</script>
 	
   </div>

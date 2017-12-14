@@ -1,14 +1,20 @@
 package org.mql.java.dao;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import org.mql.java.models.Artisant;
 import org.mql.java.models.Utilisateur;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 public class UtilisateurDao implements DaoInterface{
 	private DataSource dataSource;
@@ -131,5 +137,27 @@ public class UtilisateurDao implements DaoInterface{
 		}
 		return list;
 	}
+	public boolean sup_artisant(Artisant art) throws SQLException
+	{
+		String query = "DELETE from utilisateur WHERE utilisateur.Id = ? ";
+		PreparedStatement ps = dataSource.getConnection().prepareStatement(query);
+		ps.setInt(1, art.getId());
+		if(ps.executeUpdate() == 1 ) {
+			return true;
+		}else {
+			return false;
+		}
+	}	
+	public boolean sup_client(Utilisateur ut) throws SQLException
+	{
+		String query = "DELETE from utilisateur WHERE utilisateur.Id = ? ";
+		PreparedStatement ps = dataSource.getConnection().prepareStatement(query);
+		ps.setInt(1, ut.getId());
+		if(ps.executeUpdate() == 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}	
 
 }

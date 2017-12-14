@@ -102,7 +102,7 @@ public class ControllerArtisant {
 							HttpSession session = request.getSession();
 							session.setAttribute("login", username);
 							request.setAttribute("loggedInUser", username);
-							response.sendRedirect("profil");
+							response.sendRedirect("admin");
 					}
 					else
 					{
@@ -164,6 +164,25 @@ public class ControllerArtisant {
 				response.getWriter().println(0);
 			}
 	}	
+	@RequestMapping(value = "sup_art", method = RequestMethod.POST)
+	public @ResponseBody void sup_art( @RequestBody Artisant bean,HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException  {
+		boolean upd = UtilisateurService.supprimer_artisant(bean);
+			if(upd) {
+				response.getWriter().println(1);
+			}else {
+				response.getWriter().println(0);
+			}
+	}	
+	@RequestMapping(value = "sup_cl", method = RequestMethod.POST)
+	public @ResponseBody void sup_cli( @RequestBody Artisant bean,HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException  {
+		boolean upd = UtilisateurService.supprimer_client(bean);
+			if(upd) {
+				response.getWriter().println(1);
+			}else {
+				response.getWriter().println(0);
+			}
+	}	
+
 
 
 }

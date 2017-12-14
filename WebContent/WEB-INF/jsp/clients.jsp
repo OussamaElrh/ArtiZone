@@ -17,6 +17,7 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+							<td></td>
 								<td ng-click="sort('id')" align="center" >
 									<strong>Id Client </strong> 
 									<i class="fa fa-sort" ng-show="sortKey=='clients.id'" ng-class="{'fa fa-sort-desc':reverse,'fa fa-sort-asc':!reverse}"></i>
@@ -37,6 +38,7 @@
 						</thead>
 						<tbody>
 							<tr dir-paginate="client in clients|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+								<td><i class="fa fa-trash-o" ng-click="sup_client(client)"></i> </td>
 								<td align="center">{{client.id}}</td>
 								<td align="center">{{client.nom}}</td>
 								<td align="center">{{client.prenom}}</td>
@@ -82,6 +84,37 @@
 				$scope.sortKey = keyname;   //set the sortKey to the param passed
 				$scope.reverse = !$scope.reverse; //if true make it false and vice versa
 			}
+			$scope.sup_client = function(obj){	
+				swal({
+					  title: 'Etes-vous sure?',
+					  text: "Ce client sera supprimer!",
+					  type: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: 'oui'
+					},
+					function(isConfirm){
+						  if (!isConfirm) {
+						  } else {
+							  $http({
+									method : 'POST',
+									url : 'sup_cl',
+									data : obj,
+									headers : {
+										'Content-Type' : 'application/json'
+									}
+								}).success(function(data){
+									if(data==1){
+										$.toaster({ priority : 'success', message : 'Client supprimé avec succès !', timeout : '1000'});
+										$scope.get_client();
+									}
+									else
+										$.toaster({ priority : 'danger', message : 'Erreur lors de la suppression  !', timeout : '1000'});
+								})
+						  }
+						});
+				}
 			})
 	</script>
 	
