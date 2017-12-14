@@ -1,0 +1,11 @@
+git clone https://github.com/OussamaElrh/ArtiZone.git
+
+les derniers modif
+git pull
+
+modifier un fichier
+
+git add //fichier sinon "git add ."
+git commit -m "message" //valider
+git push //envoyer modif site
+
