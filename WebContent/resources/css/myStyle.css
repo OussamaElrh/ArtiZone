@@ -1,0 +1,115 @@
+.intro-text
+{
+  position: relative;
+  top:-100px;
+}
+.btn-primary
+{
+    position: relative;
+    left: -70px;
+}
+#categories,#villes
+{
+ height: 50px;
+ position: relative;
+ top: 100px;
+ font-weight: bold;
+}
+#rechercher
+{
+  
+  background: #fed136;
+  position: relative;
+  top: 100px;
+  left: 1.5%;
+  height: 50px;
+  font-weight: bold;
+  line-height: 1.05em;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+#titleIndex
+{
+        font-size: 38px;
+    line-height: 1.05em;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding: 20px 16px 0px 16px;
+    position: relative;
+    top:20px;
+    left: -3.5%;
+}
+#firstTitle{
+    position: relative;
+    top:30px;
+        font-size: 26px;
+    line-height: 1.2em;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 80px 0 8px 0;
+    display: block;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 10px;
+    
+    
+  }
+#jssor_1
+{
+  position: relative;
+  top: -200px;
+}
+.mainMenu a
+{
+ display: inline-block;
+ width :6rem;
+ margin-top: 20px;
+ margin-left: 10px;
+ margin-right:10px;
+ border-radius: 5%;
+ border: 2px solid white;
+}
+.mainMenu 
+{
+
+    text-align: center;
+    margin: 0px;
+    margin-top: 20px;
+
+}
+
+#imgCommander
+{
+position: relative;
+top: 180px;
+}
+#imgAide
+{
+  display: inline-block;
+  position: relative;
+
+ 
+  margin: 0px;
+
+}
+.container
+{
+  overflow: hidden;
+}
+#slides
+{
+  display: block;
+ padding: 40px;
+}
+#services
+{
+  background: black;
+  margin-top: 10px;
+}
