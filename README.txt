@@ -2,4 +2,6 @@ PROJECT ARTIZONE CREATED BY GROUP A
 Name :
 Brahim EL HAJJAJI
 Oussama ELRHAYATI 
-hghjgj
+Sara RICHI
+Souhayla BOUZRIA
+Abdelali BOUMIZ 
