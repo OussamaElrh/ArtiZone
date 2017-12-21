@@ -3,7 +3,7 @@
 
   <head>
 
-    <meta charset="utf-8">
+    <<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,14 +28,14 @@
 
   </head>
 
-  <body id="page-top">
+   <body id="page-top">
 
     <!-- Navigation -->
     <nav  class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 
       <div class="container">
          <img  src="${pageContext.request.contextPath}/resources/img/about/logo4.png" />
-        <a style="text-decoration: none; color:#EACE03;font-family: tahoma;font-size: 15px; position: relative;top:20px;left: 15px "  href="#page-top">Zone des artisants </a>
+        <a style="text-decoration: none; color:#EACE03;font-family: tahoma;font-size: 15px; position: relative;top:20px;left: 15px "  href="#page-top">Votre annuaire des artisants </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -52,13 +52,13 @@
               <a class="nav-link js-scroll-trigger" href="#about">A propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Equipes</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Equipe</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contacter</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="loginOne">Log in</a>
+              <a class="nav-link js-scroll-trigger" href="loginOne">Se Connecter</a>
             </li>
           </ul>
         </div>
@@ -75,8 +75,8 @@
 
         <div class="intro-text">
           <img  id="imgAide"  src="${pageContext.request.contextPath}/resources/img/about/BesionDaide.png" />
+          <div id="firstTitle " style="letter-spacing: 8px" > votre devis calcul&eacute; en quelques clics :
 
-          <div id="firstTitle " style="letter-spacing: 8px" >VOTRE DEVIS CALCULE EN QUELQUES CLICS :
 </div>
 
   <div class="container mainMenu">
@@ -106,7 +106,7 @@
 
 
           <div id="titleIndex" style="line-height: 1.05em; font-weight: 600; font-size: 38px;letter-spacing: 8px " >Un artisan chez vous en moins de 2h 
-et � prix garanti 24h/24 et 7j/7 </div>
+et à prix garanti 24h/24 et 7j/7 </div>
 
          
     
@@ -118,7 +118,7 @@ et � prix garanti 24h/24 et 7j/7 </div>
 
     <div class="form-group col-md-4 ">
       <select class="form-control form-control-sm" id="categories">
-      <option>Cat�gories</option>
+      <option>Cat&eacute;gories</option>
       </select>
       
       </div>
@@ -141,41 +141,41 @@ et � prix garanti 24h/24 et 7j/7 </div>
 <div id="jssor_1" style="position:relative;margin:0 auto;top:5px;left:0px;width:980px;height:65px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="${pageContext.request.contextPath}/resourcesimg/spin.svg" />
         </div>
         <div id="slides" data-u="slides" style="cursor:default;position:relative;top:10px;left:0px;width:980px;height:45px;overflow:hidden;padding:15px">
             <div>
-                <img   data-u="image" src="img/020.png" />
+                <img   data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
             <div>
-                <img data-u="image" src="img/009.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/009.png" />
             </div>
             <div>
-                <img data-u="image" src="img/020.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
             <div>
-                <img data-u="image" src="img/009.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/009.png" />
             </div>
             <div>
-                <img data-u="image" src="img/020.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
             <div>
-                <img data-u="image" src="img/010.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/010.png" />
             </div>
             <div>
-                <img data-u="image" src="img/020.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
             <div>
-                <img data-u="image" src="img/020.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
             <div>
-                <img data-u="image" src="img/009.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/009.png" />
             </div>
             <div>
-                <img data-u="image" src="img/020.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
             <div>
-                <img data-u="image" src="img/020.png" />
+                <img data-u="image" src="${pageContext.request.contextPath}/resources/img/020.png" />
             </div>
         </div>
     </div>
@@ -189,7 +189,6 @@ et � prix garanti 24h/24 et 7j/7 </div>
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 style="color:white;" class="section-heading text-uppercase">COMMENT FONCTIONNE <b>Arti-Zone</b></h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
           </div>
         </div>
         <div class="row text-center">
@@ -201,8 +200,8 @@ et � prix garanti 24h/24 et 7j/7 </div>
             </span>
             <h4 class="service-heading">CHOISISSEZ VOTRE FORFAIT</h4>
             <p class="text-muted">  
-CHOISISSEZ VOTRE FORFAIT
-En cas de panne, vous lancez l’application En’jo, vous choisissez votre univers (plomberie, serrurerie, chauffage, électricité), et vous sélectionnez le forfait qui convient le mieux à votre urgence. Les prix affichés sont clairs et fixés à l’avance.</p>
+              Choisissez votre forfait en cas de panne, vous lancez l’application ArtiZone, vous choisissez votre univers (plomberie, serrurerie, chauffage, électricité), et vous sélectionnez le forfait qui convient le mieux a votre urgence. Les prix affichés sont clairs et fixés à l’avance.
+            </p>
           </div>
 
           <div class="col-md-2">
@@ -211,7 +210,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">Notre site est un site e-commerce consiste à utiliser un média électronique – principalement, internet – dans le but de vendre des produits ou des services sans besoin de déplacer.</p>
           </div>
 
 
@@ -221,7 +220,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">SUIVEZ VOTRE INTERVENTION</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted"></p>
           </div>
           <div class="col-md-2">
             <span class="fa-stack fa-4x">
@@ -229,7 +228,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">Vous pouvez consulter le site web Artizone à travers une large gamme d'appareils (d'ordinateur, smartphones, tablettes, TV, etc.) avec le même confort visuel.</p>
           </div>
           <div class="col-md-2">
             <span class="fa-stack fa-4x">
@@ -237,7 +236,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">Nous vous informons que votre compte Artizone est protégé et sécurité, vous pouvez sécuriser encore davantage votre compte en maintenant à jour ces paramètres.</p>
           </div>
         </div>
       </div>
@@ -249,10 +248,11 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Domaines d'interventions</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
         <div class="row">
+
           <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
               <div class="portfolio-hover">
@@ -263,10 +263,10 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/portfolio/01-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Plomborie</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Plomberie</h4>
             </div>
           </div>
+
           <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
               <div class="portfolio-hover">
@@ -278,7 +278,6 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
             </a>
             <div class="portfolio-caption">
               <h4>Electricité</h4>
-              <p class="text-muted">Graphic Design</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -292,7 +291,6 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
             </a>
             <div class="portfolio-caption">
               <h4>Chauffage</h4>
-              <p class="text-muted">Identity</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -306,7 +304,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
             </a>
             <div class="portfolio-caption">
               <h4>Climatisation</h4>
-              <p class="text-muted">Branding</p>
+             
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -320,7 +318,6 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
             </a>
             <div class="portfolio-caption">
               <h4>Bricolage</h4>
-              <p class="text-muted">Website Design</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -333,8 +330,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/portfolio/06-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>serrurerie</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Serrurerie</h4>
             </div>
           </div>
         </div>
@@ -347,7 +343,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">A Propos</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
         <div class="row">
@@ -355,65 +351,39 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
             <ul class="timeline">
               <li>
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                  <img class="rounded-circle img-fluid" src="${pageContext.request.contextPath}/resources/img/about/1.jpg" alt="">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>2009-2011</h4>
-                    <h4 class="subheading">Our Humble Beginnings</h4>
+                    
+                    <h4 class="subheading">ArtiZone</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted">Est un service de recherche internet professionnel conçu par des professionnelles qui comprennent la frustration lorsque vous ne pouvez pas trouver ce que vous cherchez. Il est simple, il est rapide, et cela fonctionne pour vous maintenant. Nos recherches pertinentes peuvent vous fournir des informations de qualité supérieure, spécifique ou générale que vous le souhaitez.
+                    Enfin, vous pouvez facilement trouver le bricoleur compétent de votre choix.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="${pageContext.request.contextPath}/resources/img/about/4.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    
+                    <h4 class="subheading">Notre objectif</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Notre site est un site e-commerce consiste à utiliser un média électronique – principalement, internet – dans le but de vendre des produits ou des services sans besoin de déplacer.</p>
                   </div>
                 </div>
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>March 2011</h4>
-                    <h4 class="subheading">An Agency is Born</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>December 2012</h4>
-                    <h4 class="subheading">Transition to Full Service</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>July 2014</h4>
-                    <h4 class="subheading">Phase Two Expansion</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>Be Part
-                    <br>Of Our
-                    <br>Story!</h4>
+                  <h4>Faites partie
+                    <br>de notre
+                    <br>histoire!</h4>
                 </div>
               </li>
             </ul>
@@ -427,19 +397,21 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Notre &eacute;quipe :</h2>
+            <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-sm-4">
+
+          <div class="col-sm-3">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/1.jpg" alt="">
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
+              <h4>Richi Sara</h4>
+              <p class="text-muted">Designer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.facebook.com/ArtiZone-517973245251543/?modal=admin_todo_tour">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
@@ -456,11 +428,12 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               </ul>
             </div>
           </div>
-          <div class="col-sm-4">
+
+          <div class="col-sm-3">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-              <h4>Larry Parker</h4>
-              <p class="text-muted">Lead Marketer</p>
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/2.jpg" alt="">
+              <h4>Jafer Oualid</h4>
+              <p class="text-muted">Designer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -480,11 +453,12 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               </ul>
             </div>
           </div>
-          <div class="col-sm-4">
+
+          <div class="col-sm-3">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/3.jpg" alt="">
+              <h4>ElRhayati Oussama</h4>
+              <p class="text-muted">Developer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -504,10 +478,137 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               </ul>
             </div>
           </div>
+
+                    <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/4.jpg" alt="">
+              <h4>Bouzria Souhayla</h4>
+              <p class="text-muted">Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+                    <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/3.jpg" alt="">
+              <h4>Boumaiz AbdelAli</h4>
+              <p class="text-muted">Scrum Master & Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+                    <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/3.jpg" alt="">
+              <h4>EL Hajjaji Brahim</h4>
+              <p class="text-muted">Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+                    <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/7.jpg" alt="">
+              <h4>Boufni El Hassane</h4>
+              <p class="text-muted">Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+                    <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="${pageContext.request.contextPath}/resources/img/team/3.jpg" alt="">
+              <h4>Mahboub Marwa</h4>
+              <p class="text-muted">Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
         </div>
+
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            
           </div>
         </div>
       </div>
@@ -519,7 +620,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
         <div class="row">
           <div class="col-md-3 col-sm-6">
             <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+              <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/logos/envato.jpg" alt="">
             </a>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -546,8 +647,8 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">CONTACTEZ NOUS</h2>
+            <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
         <div class="row">
@@ -556,28 +657,28 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                    <input class="form-control" id="name" type="text" placeholder="Votre Nom *" required data-validation-required-message="Please enter your name.">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                    <input class="form-control" id="email" type="email" placeholder="Votre Email *" required data-validation-required-message="Please enter your email address.">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                    <input class="form-control" id="phone" type="tel" placeholder="Tél *" required data-validation-required-message="Please enter your phone number.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                    <textarea class="form-control" id="message" placeholder="Votre Message *" required data-validation-required-message="Please enter a message."></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Envoyer Message</button>
                 </div>
               </div>
             </form>
@@ -585,23 +686,22 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
         </div>
       </div>
     </section>
-
     <!-- Footer -->
     <footer>
-      <div class="container">
+      <div class="container" class="backgd_footer">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2017</span>
+            <span class="copyright">Copyright &copy; ArtiZone 2017</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://twitter.com/">
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/ArtiZone-517973245251543/?modal=admin_todo_tour">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
@@ -615,10 +715,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="#">Accueil</a>
               </li>
             </ul>
           </div>
@@ -642,18 +739,17 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Plomberie</h2>
+                  <p class="item-intro text-muted"></p>
                   <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/portfolio/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
+                    <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Threads</li>
                     <li>Category: Illustration</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fermer</button>
                 </div>
               </div>
             </div>
@@ -676,10 +772,10 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Electricité</h2>
+                  <p class="item-intro text-muted"></p>
                   <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/portfolio/02-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p></p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Explore</li>
@@ -687,7 +783,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fermer</button>
                 </div>
               </div>
             </div>
@@ -710,10 +806,10 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Chauffage</h2>
+                  <p class="item-intro text-muted"></p>
                   <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/portfolio/03-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p></p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Finish</li>
@@ -721,7 +817,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fermer</button>
                 </div>
               </div>
             </div>
@@ -744,10 +840,10 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Climatisation</h2>
+                  <p class="item-intro text-muted"></p>
                   <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/portfolio/04-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p></p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Lines</li>
@@ -755,7 +851,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fermer</button>
                 </div>
               </div>
             </div>
@@ -778,10 +874,10 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Bricolage</h2>
+                  <p class="item-intro text-muted"></p>
                   <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/portfolio/05-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p></p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Southwest</li>
@@ -789,7 +885,7 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fermer</button>
                 </div>
               </div>
             </div>
@@ -812,10 +908,10 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Serrurerie</h2>
+                  <p class="item-intro text-muted">.</p>
                   <img class="img-fluid d-block mx-auto" src="${pageContext.request.contextPath}/resources/img/portfolio/06-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p></p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Window</li>
@@ -823,7 +919,126 @@ En cas de panne, vous lancez l’application En’jo, vous choisissez votre univ
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fermer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Créer votre compte -->
+    <div class="portfolio-modal modal fade" id="compte" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Créer votre compte</h2>
+                  <p class="item-intro text-muted">Saisissez vos infos.</p>
+
+ 
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase"></h2>
+            <h3 class="section-subheading text-muted"></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contactForm" name="sentMessage" novalidate>
+              <div class="row">
+
+                 <!-- client -->
+                 <div class="col-md-6">
+                  <h4>Client</h4>
+                   <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Email *" required data-validation-required-message="Saisissez votre Email.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="nom" type="text" placeholder="Nom *" required data-validation-required-message="Saisissez votre nom.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="prenom" type="text" placeholder="Prénom *" required data-validation-required-message="Saisissez votre prénom.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="Password" type="Password" placeholder="mot de passe *" required data-validation-required-message="Saisissez votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="Password2" type="Password" placeholder="Confirmer votre mot de passe *" required data-validation-required-message="Repeter votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                 
+                    <div class="color_checkbox">
+                       <input type="checkbox" id="newsletter" name="cgu" class="horizonC" value="1">J'accepte les conditions générales d'utilisation d'ArtiZone.
+                    </div>
+                  </br>
+                   <div class="col-lg-12 text-center">
+                  <button class="btn btn-primary" href="loginOne">Se connecter</button>
+                </div>
+                </div>
+
+
+
+                <!-- artisant -->                
+                <div class="col-md-6">
+                  <h4>Artisant</h4>
+              <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Email *" required data-validation-required-message="Saisissez votre Email.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="nom" type="text" placeholder="Nom *" required data-validation-required-message="Saisissez votre nom.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="prenom" type="text" placeholder="Prénom *" required data-validation-required-message="Saisissez votre prénom.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="Password" type="Password" placeholder="mot de passe *" required data-validation-required-message="Saisissez votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                   <div class="form-group">
+                    <input class="form-control" id="Password2" type="Password" placeholder="Confirmer votre mot de passe *" required data-validation-required-message="Repeter votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                 
+                    <div class="color_checkbox">
+                       <input type="checkbox" id="newsletter" name="cgu" class="horizonC" value="1">J'accepte les conditions générales d'utilisation d'ArtiZone.
+                    </div>
+                  </br>
+                   <div class="col-lg-12 text-center">
+                  <button class="btn btn-primary" type="submit">Se connecter</button>
+                </div>
+                </div>
+
+                <div class="clearfix"></div>
+              
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+                <!-- <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Annuler</button>-->
                 </div>
               </div>
             </div>

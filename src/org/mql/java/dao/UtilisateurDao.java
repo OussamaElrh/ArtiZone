@@ -16,7 +16,7 @@ import org.mql.java.models.Utilisateur;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-public class UtilisateurDao implements DaoInterface{
+public class UtilisateurDao {
 	private DataSource dataSource;
 
 	public UtilisateurDao(DataSource dataSource) {
@@ -117,6 +117,28 @@ public class UtilisateurDao implements DaoInterface{
 			return false;
 		}
 	}
+	public boolean update_referent(Artisant art) throws SQLException {
+		String query = "UPDATE artisant set referent = ? WHERE id = ?";
+		PreparedStatement ps = dataSource.getConnection().prepareStatement(query);
+		ps.setInt(1, 1);
+		ps.setInt(2, art.getId());
+		if(ps.executeUpdate() == 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public boolean update_unrefent(Artisant art) throws SQLException {
+		String query = "UPDATE artisant set referent = ? WHERE id = ?";
+		PreparedStatement ps = dataSource.getConnection().prepareStatement(query);
+		ps.setInt(1, 0);
+		ps.setInt(2, art.getId());
+		if(ps.executeUpdate() == 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	public List getClients() throws SQLException{
 		ArrayList<Utilisateur> list = new ArrayList<Utilisateur>();
 		String query = "Select Utilisateur.Id,nom,prenom,ville,tele from utilisateur where type_utilisateur=?";
@@ -158,6 +180,74 @@ public class UtilisateurDao implements DaoInterface{
 		}else {
 			return false;
 		}
-	}	
+	}
+public boolean isExist(String login, String password) throws SQLException {
+		
+		String query = "Select count(1) from utilisateur where username = ? and password = ? ";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+		pstmt.setString(1, login);
+		pstmt.setString(2, password);
+		ResultSet resultSet = pstmt.executeQuery();
+		if (resultSet.first())
+			return (resultSet.getInt(1) > 0);
+		else
+				return false;
+	}
+
+	public int insertUser(String nom, String prenom, String email,
+		String ville, String tel, String login, String password, int type) throws SQLException {
+		
+		String query = "INSERT INTO `utilisateur`( `username`, `password`, `nom`, `prenom`, `email`, `tele`, `ville`, `type`)"
+			+ "values ('"+login+"', '"+password+"', '"+nom+"','"+prenom+"', '"+email+"', '"+tel+"', '"+ville+"', '"+type+"') ;";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+
+		return pstmt.executeUpdate(query);
+	}
+	
+	public int getUserId(String email) throws SQLException {
+		String query = "select id from utilisateur where email = ? ";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+		pstmt.setString(1, email);
+		ResultSet rs = pstmt.executeQuery();
+		rs.next();
+		return rs.getInt("id");
+	}
+
+	public int insertToken(int id, String code) throws SQLException {
+		String query = "INSERT INTO `token`(`id`, `code`, `statut`) "
+					+ "VALUES ('"+id+"','"+code+"','0') ;";
+			PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+
+			return pstmt.executeUpdate(query);
+		}
+	
+	public int compareCode(int id, String code1) throws SQLException {
+		String query = "select code from token where id = ? ";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+		pstmt.setInt(1, id);
+		ResultSet rs = pstmt.executeQuery();
+		rs.next();
+		String code2 = rs.getString("code");
+		
+		if(code1.equals(code2))
+			return 1;
+		return 0;
+	}
+	
+	public int getTokenStatus(int id) throws SQLException {
+		String query = "select statut from token where id = ? ";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+		pstmt.setInt(1, id);
+		ResultSet rs = pstmt.executeQuery();
+		rs.next();
+		return rs.getInt("statut");
+	}
+	
+	public int validToken(int id) throws SQLException {
+		String query = "UPDATE `token` SET `statut`='1' WHERE id='"+id+"'";
+		PreparedStatement pstmt = dataSource.getConnection().prepareStatement(query);
+
+		return pstmt.executeUpdate(query);
+	}
 
 }

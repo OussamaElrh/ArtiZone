@@ -3,9 +3,7 @@
         <div class="col-lg-2">
         </div>
         <div class="col-8">
-           
-
-                <form role="form" name="modify">
+          		<form role="form" name="modify">
                                         <div class="form-group">
                                         	 
                                             <div class="form-group">
@@ -62,7 +60,7 @@
                                               <label>Confirmer Password :</label>
                                             	<div class="input-group">
                                             		<span class="input-group-addon"><i class="fa fa-eye" onmouseup="mopa(this)" onmouseout="mop(this)"></i></span>
-                               						<input type="Password" ng-pattern="admin.password" class="form-control" placeholder="Re-Password" ng-model="repassword"  id="rpawd"  ng-keyup="compare()" ng-disabled="d_pa" required>
+                               						<input type="Password" class="form-control" placeholder="Re-Password" ng-model="repassword"  id="rpawd"  ng-keyup="compare()" ng-disabled="d_pa" required>
                                						<span class="input-group-addon"><i class="fa fa-pencil-square-o" ng-click="f_pa()"></i></span>
                                             	</div>
                                             	<span>{{message}}</span>

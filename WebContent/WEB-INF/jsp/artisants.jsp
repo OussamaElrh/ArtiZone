@@ -64,10 +64,10 @@
 								<td align="center">
 								<div ng-switch on="artisant.referant">
                                       <div ng-switch-when="0">
-                                      <i class="fa fa-remove"></i>
+                                      <i class="fa fa-remove" ng-click="modify_ref(artisant)"></i>
                                        </div>                                       
                                        <div ng-switch-when="1">
-                                           <i class="fa fa-check"></i>
+                                           <i class="fa fa-check" ng-click="modify_unref(artisant)"></i>
                                        </div>
                                     </div>
                                   </td>
@@ -126,7 +126,7 @@
     					$.toaster({ priority : 'danger', message : 'Erreur lors de la confirmation  !', timeout : '1000'});
     			})
 			}
-	$scope.modify_unconf = function(obj){
+			$scope.modify_unconf = function(obj){
 				
 				$http({
     				method : 'POST',
@@ -144,6 +144,43 @@
     					$.toaster({ priority : 'danger', message : 'Erreur lors déconfirmation  !', timeout : '1000'});
     			})
 			}
+		
+			$scope.modify_ref = function(obj){
+				
+				$http({
+    				method : 'POST',
+    				url : 'modify_ref',
+    				data : obj,
+    				headers : {
+    					'Content-Type' : 'application/json'
+    				}
+    			}).success(function(data){
+    				if(data==1){
+    					$.toaster({ priority : 'success', message : 'Artisant référencé avec succès !', timeout : '1000'});
+    					$scope.get_artisant();
+    				}
+    				else
+    					$.toaster({ priority : 'danger', message : 'Erreur lors de la modification  !', timeout : '1000'});
+    			})
+			}
+			$scope.modify_unref = function(obj){
+				
+				$http({
+    				method : 'POST',
+    				url : 'modify_unref',
+    				data : obj,
+    				headers : {
+    					'Content-Type' : 'application/json'
+    				}
+    			}).success(function(data){
+    				if(data==1){
+    					$.toaster({ priority : 'success', message : 'Artisant inréférencé avec succès !', timeout : '1000'});
+    					$scope.get_artisant();
+    				}
+    				else
+    					$.toaster({ priority : 'danger', message : 'Erreur lors modification  !', timeout : '1000'});
+    			})
+			}	
 			
 		$scope.sup_art = function(obj){	
 			swal({
@@ -154,9 +191,8 @@
 				  confirmButtonColor: '#3085d6',
 				  cancelButtonColor: '#d33',
 				  confirmButtonText: 'oui'
-				},
-				function(inputValue){
-					  if (inputValue===false) {
+				}).then((result)=> {
+					  if (result.value == 'cancel') {
 					  } else {
 						  $http({
 								method : 'POST',
@@ -181,7 +217,7 @@
 				$scope.sortKey = keyname;   //set the sortKey to the param passed
 				$scope.reverse = !$scope.reverse; //if true make it false and vice versa
 			}
-			})
+			});
 			
 	</script>
 	

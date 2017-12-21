@@ -56,6 +56,7 @@
 	</div>
 </div>
 
+   
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -93,10 +94,11 @@
 					  confirmButtonColor: '#3085d6',
 					  cancelButtonColor: '#d33',
 					  confirmButtonText: 'oui'
-					},
-					function(isConfirm){
-						  if (!isConfirm) {
+					}).then((result)=> {
+						  if (result.value == 'cancel') {
+							  
 						  } else {
+							  
 							  $http({
 									method : 'POST',
 									url : 'sup_cl',
@@ -107,15 +109,15 @@
 								}).success(function(data){
 									if(data==1){
 										$.toaster({ priority : 'success', message : 'Client supprimé avec succès !', timeout : '1000'});
-										$scope.get_client();
+										$scope.get_clients();
 									}
 									else
 										$.toaster({ priority : 'danger', message : 'Erreur lors de la suppression  !', timeout : '1000'});
 								})
 						  }
-						});
+					})
 				}
-			})
+			});
 	</script>
 	
   </div>

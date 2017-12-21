@@ -1,0 +1,100 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	
+}
+
+body {
+	font-family: calibri, arial, verdana;
+}
+/*form styles*/
+#msform {
+	width: 30%;
+	margin: 50px auto;
+	text-align: center;
+	height: 60%;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	height: 90%;
+	/*stacking fieldsets above each other*/
+	
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform select {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 5%;
+	box-sizing: border-box;
+	font-family: calibri;
+	color: #2C3E50;
+	font-size: 18px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	font-size: 16px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 20px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+
+button {
+	width: 100%;
+	background: white;
+	font-size: 16px;
+	color: black;
+	border:1px black;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin-bottom:3px;
+}
+button:hover{
+	background: #fed136;
+	color: white;
+}

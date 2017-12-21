@@ -17,6 +17,12 @@
 	<bean name="UtilisateurDao" class="org.mql.java.dao.UtilisateurDao">
 		<constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
 	</bean>
+	<bean name="ArtisantDao" class="org.mql.java.dao.ArtisantDao">
+		<constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+	</bean>
+	<bean name="ser" class="org.mql.java.dao.DaoImplementation">
+		<constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+	</bean>
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
